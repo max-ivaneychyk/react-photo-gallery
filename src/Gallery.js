@@ -37,7 +37,7 @@ const Gallery = React.memo(function Gallery({
       observer.disconnect();
       window.cancelAnimationFrame(animationFrameID);
     };
-  });
+  }, [galleryEl]);
 
   const handleClick = (event, { index }) => {
     onClick(event, {
